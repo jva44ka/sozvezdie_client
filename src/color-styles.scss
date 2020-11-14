@@ -1,0 +1,14 @@
+.theme-1 {
+  $color-red-1: red;
+  $color-red-2: rgba(255, 0, 0, 0.75);
+
+  $color-green-1: rgba(0, 128, 0, 0.5);
+
+  #main-header, #main-footer {
+    background: linear-gradient(0.25turn, $color-green-1, $color-red-2, $color-green-1);
+  }
+
+  #not-found-wrapper {
+    color: red;
+  }
+}
