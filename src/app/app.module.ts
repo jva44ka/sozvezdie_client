@@ -10,6 +10,7 @@ import { MainLayoutModule } from './components/main-layout/main-layout.module';
 import { TourPageModule } from './components/main-layout/tour-page/tour-page.module';
 import { ToursListPageModule } from './components/main-layout/tours-list-page/tours-list-page.module';
 import { NotFoundPageModule } from './components/main-layout/not-found-page/not-found-page.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NotFoundPageModule } from './components/main-layout/not-found-page/not-
     MainLayoutModule,
     TourPageModule,
     ToursListPageModule,
-    NotFoundPageModule
+    NotFoundPageModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

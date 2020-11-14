@@ -1,3 +1,17 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$sozvezdie-primary: mat-palette($mat-indigo);
+$sozvezdie-accent: mat-palette($mat-pink, A200, A100, A400);
+$sozvezdie-warn: mat-palette($mat-red);
+$sozvezdie-theme: mat-light-theme((
+  color: (
+    primary: $sozvezdie-primary,
+    accent: $sozvezdie-accent,
+    warn: $sozvezdie-warn,
+  )
+));
+@include angular-material-theme($sozvezdie-theme);
+
 .theme-1 {
   $color-red-1: red;
   $color-red-2: rgba(255, 0, 0, 0.75);
