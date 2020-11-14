@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OfferStoreService } from '../../../services/offer-store.service';
+import { Offer } from '../../../models/offer';
 
 @Component({
   selector: 'app-tour-page',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TourPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private offerStoreService: OfferStoreService) { }
 
   ngOnInit(): void {
   }

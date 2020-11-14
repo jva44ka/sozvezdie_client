@@ -1,22 +1,31 @@
 @import '~@angular/material/theming';
-@include mat-core();
-$sozvezdie-primary: mat-palette($mat-indigo);
-$sozvezdie-accent: mat-palette($mat-pink, A200, A100, A400);
-$sozvezdie-warn: mat-palette($mat-red);
-$sozvezdie-theme: mat-light-theme((
-  color: (
-    primary: $sozvezdie-primary,
-    accent: $sozvezdie-accent,
-    warn: $sozvezdie-warn,
-  )
-));
-@include angular-material-theme($sozvezdie-theme);
 
 .theme-1 {
+  // цвета
   $color-red-1: red;
   $color-red-2: rgba(255, 0, 0, 0.75);
-
+  $color-red-3: #e07875;
   $color-green-1: rgba(0, 128, 0, 0.5);
+  $color-green-2: #edf2b8;
+  $color-black-1: black;
+  $color-white-1: white;
+
+  $mat-primary: mat-palette($mat-indigo);
+  $mat-accent: mat-palette($mat-pink, A200, A100, A400);
+  $mat-warn: mat-palette($mat-red);
+
+  // материал дизайновская тема
+  @include mat-core();
+  $mat-theme-1: mat-light-theme((
+    color: (
+      primary: $mat-primary,
+      accent: $mat-accent,
+      warn: $mat-warn,
+    )
+  ));
+  @include angular-material-theme($mat-theme-1);
+
+  //далее уже для своих элементов
 
   #main-header, #main-footer {
     background: linear-gradient(0.25turn, $color-green-1, $color-red-2, $color-green-1);
@@ -24,5 +33,33 @@ $sozvezdie-theme: mat-light-theme((
 
   #not-found-wrapper {
     color: red;
+  }
+
+  .tour-card-closest-period {
+    background-color: $color-green-2;
+    border-color: $color-white-1;
+  }
+
+  .tour-card-wrapper {
+    color: $color-black-1;
+    //box-shadow: rgba(0,0,0,.14);
+  }
+
+  .tour-card-title-wrapper {
+    background-color: rgba($color-black-1, 0.6);
+  }
+
+  .tour-card-title {
+    color: $color-white-1;
+  }
+
+  .tour-card-description-hider {
+    background: linear-gradient(to bottom, rgba(238, 238, 238, 0) 5%, #ffffff 95%);
+  }
+
+  .tour-card-min-price {
+    p {
+      color: $color-red-3;
+    }
   }
 }
