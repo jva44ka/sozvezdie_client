@@ -1,0 +1,47 @@
+:host {
+  width: 100%;
+}
+
+.tour-page-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+
+.tour-page-wrapper.is-loading {
+  justify-content: center;
+  align-items: center;
+}
+
+.tour-page-title {
+  font-size: 48px;
+  justify-self: center;
+  margin: 2.1rem auto 1.68rem auto;
+}
+
+.tour-page-price-wrapper {
+  font-size: 19px;
+  margin: 30px auto 40px auto;
+
+  .price {
+    font-size: 24px;
+  }
+
+  .date-label {
+    font-size: 19px;
+  }
+}
+
+.tour-page-routes {
+  margin-top: 30px;
+
+  p {
+    font-size: 24px;
+  }
+
+  ul {
+    list-style: none;
+  }
+}

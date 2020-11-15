@@ -20,8 +20,8 @@ import { RouterModule } from '@angular/router';
     MatIconModule
   ],
   exports: [
-    TourCardComponent,
-    ModalWindowComponent
+      TourCardComponent,
+      ModalWindowComponent
   ]
 })
 export class SharedModule { }
