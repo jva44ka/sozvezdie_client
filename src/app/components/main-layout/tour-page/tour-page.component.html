@@ -1,0 +1,30 @@
+<div *ngIf="!isLoading; else loading" class="tour-page-wrapper">
+  <div class="tour-page-title">{{offer.title}}</div>
+  <div class="tour-page-price-wrapper">
+    Цена от <span class="price">{{offer.minPrice}}₽</span> за человека на
+    <span class="date-label">
+      {{offer.periodStart | date: 'shortDate'}} - {{offer.periodEnd | date: 'shortDate'}}
+    </span>
+  </div>
+  <div class="tour-page-description">{{offer.description}}</div>
+  <div class="tour-page-routes">
+    <p>Маршрут:</p>
+    <ul class="routes-list">
+      <li *ngFor="let route of offer.route; let i = index" [attr.data-index]="i">
+        {{i + 1}}. {{route}}
+      </li>
+    </ul>
+  </div>
+  <div class="tour-page-album">
+    <ngx-image-gallery
+      [images]="images"
+      [conf]="conf"
+    ></ngx-image-gallery>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="tour-page-wrapper is-loading">
+    <img src="assets/spinner.svg">
+  </div>
+</ng-template>

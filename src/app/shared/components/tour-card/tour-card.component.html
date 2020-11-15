@@ -1,0 +1,18 @@
+<a class="tour-card-wrapper" [routerLink]="['tour/' + tour.id]">
+  <div class="tour-card-image"
+       [style.background-image]="'url(' + thumbnail + ')'">
+    <div class="tour-card-title-wrapper">
+      <div class="tour-card-title">{{tour.title}}</div>
+      <div class="tour-card-closest-period">
+        {{tour.periodStart | date: 'shortDate'}} - {{tour.periodEnd | date: 'shortDate'}}
+      </div>
+    </div>
+  </div>
+  <div class="tour-card-description">
+    <div class="tour-card-description-hider"></div>
+    {{tour.header}}
+  </div>
+  <div class="tour-card-min-price">
+    Цена от: <span class="price">{{tour.minPrice}}₽</span>
+  </div>
+</a>

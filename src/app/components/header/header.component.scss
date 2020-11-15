@@ -1,0 +1,39 @@
+:host {
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    li {
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: max-content;
+        font-size: 20px;
+        padding: 0 20px 0 20px;
+      }
+    }
+  }
+}
+
+a#header-main-link {
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  height: 89px;
+  width: 220px;
+}
