@@ -1,4 +1,4 @@
-<div *ngIf="!isLoading; else loading" class="tour-page-wrapper" (click)="galleryOpened(0)">
+<div *ngIf="!isLoading; else loading" class="tour-page-wrapper">
   <div class="tour-page-title">{{offer.title}}</div>
   <div class="tour-page-price-wrapper">
     Цена от <span class="price">{{offer.minPrice}}₽</span> за человека на
@@ -19,11 +19,6 @@
     <ngx-image-gallery
       [images]="images"
       [conf]="conf"
-      (onOpen)="galleryOpened($event)"
-      (onClose)="galleryClosed()"
-      (onImageClicked)="galleryImageClicked($event)"
-      (onImageChange)="galleryImageChanged($event)"
-      (onDelete)="deleteImage($event)"
     ></ngx-image-gallery>
   </div>
 </div>

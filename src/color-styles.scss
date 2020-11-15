@@ -1,7 +1,5 @@
-@import '~@angular/material/theming';
-
 .theme-1 {
-  // цвета
+  // colors
   $color-red-1: red;
   $color-red-2: rgba(255, 0, 0, 0.75);
   $color-red-3: #e07875;
@@ -10,23 +8,6 @@
   $color-black-1: black;
   $color-white-1: white;
   $color-blue-1: #039be5;
-
-  $mat-primary: mat-palette($mat-indigo);
-  $mat-accent: mat-palette($mat-pink, A200, A100, A400);
-  $mat-warn: mat-palette($mat-red);
-
-  // материал дизайновская тема
-  @include mat-core();
-  $mat-theme-1: mat-light-theme((
-    color: (
-      primary: $mat-primary,
-      accent: $mat-accent,
-      warn: $mat-warn,
-    )
-  ));
-  @include angular-material-theme($mat-theme-1);
-
-  //далее уже для своих элементов
 
   #main-header, #main-footer {
     background: linear-gradient(0.25turn, $color-green-1, $color-red-2, $color-green-1);
