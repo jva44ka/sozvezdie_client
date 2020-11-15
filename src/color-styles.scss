@@ -9,6 +9,7 @@
   $color-green-2: #edf2b8;
   $color-black-1: black;
   $color-white-1: white;
+  $color-blue-1: #039be5;
 
   $mat-primary: mat-palette($mat-indigo);
   $mat-accent: mat-palette($mat-pink, A200, A100, A400);
@@ -57,9 +58,11 @@
     background: linear-gradient(to bottom, rgba(238, 238, 238, 0) 5%, #ffffff 95%);
   }
 
-  .tour-card-min-price {
-    p {
-      color: $color-red-3;
-    }
+  .price {
+    color: $color-red-3;
+  }
+
+  .date-label {
+    color: $color-blue-1;
   }
 }
