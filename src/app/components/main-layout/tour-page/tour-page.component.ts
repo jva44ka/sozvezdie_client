@@ -38,12 +38,10 @@ export class TourPageComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.offerId = Number(params['id']);
-      console.log('Film id is: ' + this.offerId);
 
       this.offerHttpService.getOfferById(this.offerId)
         .subscribe((res: Offer) => {
           this.offer = res;
-          console.log(this.offer);
           this.isLoading = false;
           this.images = this.images.concat(this.offer.photoAlbum.map((phCard: PhotoCard) =>  ({
               url: phCard.photo,
